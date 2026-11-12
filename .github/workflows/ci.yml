@@ -19,6 +19,7 @@ jobs:
       - run: npm ci
       - run: npm test
       - name: codecov
+        continue-on-error: true
         run: npx codecov
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
